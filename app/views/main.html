@@ -1,7 +1,14 @@
-<div class="container-cell" ng-controller="WeatherController">
-	<h2>{{weather.name}}</h2>
-	<h3>{{weather.main.temp}}&deg;</h3>
+<div class="container-cell weather-widget valign-parent" ng-controller="WeatherController">
+	<div class="weather-widget-content">
+		<div class="loading-spinner" ng-class="{ 'is-hidden': isLoaded, 'is-visible': !isLoaded }"></div>
+		<div class="weather-data-container valign" ng-class="{ 'is-hidden': !isLoaded, 'is-visible': isLoaded }">
+			<h2 class="location-name">{{ weather.name }}</h2>
+			<h3 class="current-temperature">{{ weather.main.temp | number: 0 }}&deg;</h3>
+		</div>
+		<div class="valign-helper"></div>
+	</div>
 </div>
+
 <div class="container-cell"></div>
 <div class="container-cell"></div>
 <div class="container-cell"></div>

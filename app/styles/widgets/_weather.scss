@@ -1,0 +1,40 @@
+.weather-widget {
+	text-align: center;
+	background-color: $color-green-sea;
+
+	&:after {
+		z-index: 1;
+		content : "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.weather-data-container {
+		margin: 0 auto;
+		@include vendor-prefix(transition, $global-slow-fade-settings);
+	}
+
+	.location-name {
+		margin: 0;
+		font-size: 24px;
+		font-weight: 300;
+	}
+
+	.current-temperature {
+		margin: 0;
+		font-size: 72px;
+		font-weight: 300;
+	}
+
+	.weather-widget-content, .background-underlay {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}

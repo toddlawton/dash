@@ -1,5 +1,19 @@
+// Lib Dependencies
 @import "bourbon/bourbon";
-@import "utilities/variables";
+
+// Global
+@import "global/variables";
+@import "global/typography";
+@import "layout/grid";
+@import "layout/main";
+
+// Utilities & Objects
+@import "utilities/helpers";
+@import "utilities/mixins";
+@import "objects/elements";
+
+// Widgets
+@import "widgets/weather";
 
 body {
 	color: #fff;
@@ -34,6 +48,7 @@ body {
 }
 
 .container-cell {
+	position: relative;
 	-webkit-order: 0;
 	-ms-flex-order: 0;
 	order: 0;
@@ -48,11 +63,11 @@ body {
 	padding: 20px;
 	
 	&:nth-child(1) {
-		background-color: $color-pomegranate;
+		background-color: $color-green-sea;
 	}
 
 	&:nth-child(2) {
-		background-color: $color-alizarin;
+		background-color: $color-turquoise;
 	}
 
 	&:nth-child(3) {

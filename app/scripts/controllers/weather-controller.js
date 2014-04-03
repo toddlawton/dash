@@ -1,5 +1,6 @@
 app.controller('WeatherController', function($scope, geolocation, weatherData) {
-	
+	$scope.isLoaded = false;
+
 	geolocation.getLocation().then(function(data) {
 		$scope.coordinates = data.coords;
 	})
@@ -13,6 +14,7 @@ app.controller('WeatherController', function($scope, geolocation, weatherData) {
 		.then(function(result) {
 			console.log(result);
 			$scope.weather = result.data;
+			$scope.isLoaded = true;
 		});
 	}
 });
