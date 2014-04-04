@@ -18,3 +18,18 @@ app.controller('WeatherController', function($scope, geolocation, weatherData) {
 		});
 	}
 });
+
+app.factory('weatherData', function($http) {
+	return {
+		queryWeather: function(locationQuery) {
+			return $http.jsonp('http://api.openweathermap.org/data/2.5/weather', {
+				params: {
+					"lat": locationQuery.latitude,
+					"lon": locationQuery.longitude,
+					"units": "metric",
+					"callback": "JSON_CALLBACK",
+				}
+			});
+		}
+	}
+});

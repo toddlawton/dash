@@ -1458,7 +1458,7 @@ body {
     -moz-transition: 1.5s ease all;
     -o-transition: 1.5s ease all;
     transition: 1.5s ease all; }
-  .weather-widget .location-name {
+  .weather-widget .temperature-label {
     margin: 0;
     font-size: 24px;
     font-weight: 300; }
@@ -1473,7 +1473,16 @@ body {
     left: 0;
     top: 0; }
 
-body {
+.songkick-widget .events-list {
+  list-style-type: none; }
+  .songkick-widget .events-list li {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold; }
+
+body, p {
   color: #fff; }
 
 .container {
@@ -1517,8 +1526,6 @@ body {
   width: 50%;
   height: 50%;
   padding: 20px; }
-  .container-cell:nth-child(1) {
-    background-color: #16a085; }
   .container-cell:nth-child(2) {
     background-color: #1abc9c; }
   .container-cell:nth-child(3) {
