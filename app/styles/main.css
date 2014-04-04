@@ -1365,13 +1365,20 @@ blockquote {
 /**
  * Pull classes, to move grid items back to the left by certain amounts.
  */
-body {
+.container {
   margin: 48px auto 96px;
-  padding: 0 48px;
-  background: white; }
+  padding: 0 48px; }
 
 #page-root {
   padding: 48px 0; }
+
+.header {
+  width: 100%;
+  background: #fff;
+  padding: 12px 48px;
+  margin: 0; }
+  .header .logo {
+    width: 80px; }
 
 /* Vertical Alignment Helpers */
 .valign-parent {
@@ -1439,10 +1446,24 @@ body {
     transform: perspective(300px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(300px) rotateX(-180deg) rotateY(-179.9deg); } }
 
-.weather-widget {
+.container {
+  width: 100%;
+  position: relative; }
+  .container [class*="widget-"] {
+    position: absolute;
+    width: 20%;
+    min-height: 200px;
+    height: auto; }
+    .container [class*="widget-"] .widget-inner {
+      position: relative;
+      width: 100%;
+      padding: 0;
+      margin: 0; }
+
+.widget-weather {
   text-align: center;
-  background-color: #16a085; }
-  .weather-widget:after {
+  padding: 20px; }
+  .widget-weather:after {
     z-index: 1;
     content: "";
     display: block;
@@ -1451,84 +1472,45 @@ body {
     height: 100%;
     top: 0;
     left: 0; }
-  .weather-widget .weather-data-container {
+  .widget-weather .weather-data-container {
     margin: 0 auto;
     -webkit-transition: 1.5s ease all;
     -ms-transition: 1.5s ease all;
     -moz-transition: 1.5s ease all;
     -o-transition: 1.5s ease all;
     transition: 1.5s ease all; }
-  .weather-widget .temperature-label {
+  .widget-weather .temperature-label {
     margin: 0;
     font-size: 24px;
     font-weight: 300; }
-  .weather-widget .current-temperature {
+  .widget-weather .current-temperature {
     margin: 0;
     font-size: 72px;
     font-weight: 300; }
-  .weather-widget .weather-widget-content, .weather-widget .background-underlay {
+  .widget-weather .widget-weather-content, .widget-weather .background-underlay {
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
     top: 0; }
 
-.songkick-widget .events-list {
-  list-style-type: none; }
-  .songkick-widget .events-list li {
-    font-size: 12px;
-    line-height: 18px;
+.widget-songkick {
+  padding: 20px; }
+  .widget-songkick h3 {
+    margin: 0 0 24px;
+    font-size: 24px;
+    font-weight: 300; }
+  .widget-songkick .events-list {
+    list-style-type: none;
     margin: 0;
-    padding: 0;
-    font-weight: bold; }
+    padding: 0; }
+    .widget-songkick .events-list li {
+      font-size: 12px;
+      line-height: 18px;
+      margin: 0 0 5px;
+      padding: 0;
+      font-weight: bold; }
 
 body, p {
-  color: #fff; }
-
-.container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 1.5%;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.container-cell {
-  position: relative;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  width: 50%;
-  height: 50%;
-  padding: 20px; }
-  .container-cell:nth-child(2) {
-    background-color: #1abc9c; }
-  .container-cell:nth-child(3) {
-    background-color: #2c3e50; }
-  .container-cell:nth-child(4) {
-    background-color: #34495e; }
+  color: #fff;
+  background: #16a085; }

@@ -1,0 +1,18 @@
+.container {
+	width: 100%;
+	position: relative;
+
+	[class*="widget-"] {
+		position: absolute;
+		width: 20%;
+		min-height: 200px;
+		height: auto;
+
+		.widget-inner {
+			position: relative;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}

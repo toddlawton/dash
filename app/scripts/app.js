@@ -18,3 +18,17 @@ app.config(function ($routeProvider) {
 		redirectTo: '/'
 	});
 });
+
+app.directive('shapeshift', function() {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+			$(".container").shapeshift({
+			        gutterX: -1, // Compensate for border width
+			        gutterY: -1, // Compensate for border width
+			        paddingX: 0,
+			        paddingY: 0
+			});
+		}
+	}
+});
