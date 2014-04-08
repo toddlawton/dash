@@ -3,10 +3,13 @@ app.controller('SongkickController', function($scope, geolocation, songkickData)
 	$scope.getSongkick = function() {
 		songkickData.querySongkick()
 		.then(function(result) {
-			console.log(result);
 			$scope.songkick = result.resultsPage.results;
-			console.log($scope.songkick);
 			$scope.events = $scope.songkick.event;
+			$scope.eventList = [];
+			for (i=0; i < $scope.events.length; i++) {
+				$scope.eventList.push($scope.events[i]);	
+			}
+			console.log($scope.eventList);
 			$scope.isLoaded = true;
 		});
 	}();

@@ -12,7 +12,6 @@ app.controller('WeatherController', function($scope, geolocation, weatherData) {
 		$scope.locationQuery = $scope.coordinates;
 		weatherData.queryWeather($scope.locationQuery)
 		.then(function(result) {
-			console.log(result);
 			$scope.weather = result.data;
 			$scope.isLoaded = true;
 		});
