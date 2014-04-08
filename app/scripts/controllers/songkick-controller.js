@@ -1,15 +1,19 @@
 app.controller('SongkickController', function($scope, geolocation, songkickData) {
 	$scope.isLoaded = false;
+
+	$scope.itemsToArray = function (items) {
+		var array = [];
+			angular.forEach($scope.words, function(item) {
+			array.push(item);
+		});
+		return array;
+	};
 	$scope.getSongkick = function() {
 		songkickData.querySongkick()
 		.then(function(result) {
-			$scope.songkick = result.resultsPage.results;
+			$scope.songkick = angular.fromJson(result.resultsPage.results);
 			$scope.events = $scope.songkick.event;
-			$scope.eventList = [];
-			for (i=0; i < $scope.events.length; i++) {
-				$scope.eventList.push($scope.events[i]);	
-			}
-			console.log($scope.eventList);
+			console.log($scope.events);
 			$scope.isLoaded = true;
 		});
 	}();

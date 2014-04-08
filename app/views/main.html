@@ -13,11 +13,9 @@
 		<div class="loading-spinner" ng-class="{ 'is-hidden': isLoaded, 'is-visible': !isLoaded }"></div>
 		<div class="valign is-hidden" ng-class="{ 'is-hidden': !isLoaded, 'is-visible': isLoaded }">
 			<h3>Upcoming Shows</h3>
-			<ul class="events-list" ng-repeat="event in eventList">
-				<li ng-repeat="eventDetails in event">
-					
-						{{ eventDetails }}
-					
+			<ul class="events-list">
+				<li ng-repeat="event in events">
+					{{ event }}
 					
 				</li>
 			</ul>
