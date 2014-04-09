@@ -18,12 +18,6 @@
 		@include vendor-prefix(transition, $global-slow-fade-settings);
 	}
 
-	.temperature-label {
-		margin: 0;
-		font-size: 24px;
-		font-weight: 300;
-	}
-
 	.current-temperature {
 		margin: 0;
 		font-size: 72px;

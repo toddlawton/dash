@@ -8,18 +8,34 @@
 		<div class="valign-helper"></div>
 	</div>
 </div>
-<div class="container-cell widget-songkick valign-parent" ng-controller="SongkickController">
+<div class="container-cell widget-news" ng-controller="HackerNewsController">
+	<div class="widget-inner">
+		<div class="loading-spinner" ng-class="{ 'is-hidden': isLoaded, 'is-visible': !isLoaded }"></div>
+		<h3 class="title">Hacker News</h3>
+		<ul class="news-posts">
+			<li ng-repeat="post in posts.items">
+				<a href="{{ post.url }}">{{ post.title }}</a>
+				<p class="summary"> {{ post.points + " points"}} by {{ post.postedBy }} {{ post.postedAgo }} | {{ post.commentCount + " comments" }}</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- <div class="container-cell widget-songkick valign-parent" ng-controller="BandsinTownController">
 	<div class="widget-inner">
 		<div class="loading-spinner" ng-class="{ 'is-hidden': isLoaded, 'is-visible': !isLoaded }"></div>
 		<div class="valign is-hidden" ng-class="{ 'is-hidden': !isLoaded, 'is-visible': isLoaded }">
 			<h3>Upcoming Shows</h3>
 			<ul class="events-list">
 				<li ng-repeat="event in events">
-					{{ event }}
+					<span ng-repeat="artist in artists">
+						<h2 ng-repeat="name in artist">
+							{{ name.name }}
+						</h2>
+					</span>
 					
 				</li>
 			</ul>
 		</div>
 		<div class="valign-helper"></div>
 	</div>
-</div>
+</div> -->

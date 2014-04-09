@@ -1,0 +1,15 @@
+.widget-news {
+	.news-posts {
+		list-style-type: none;
+		padding: 0;
+		li {
+			margin-bottom: 10px;
+			a {
+				color: #fff;
+			}
+			.summary {
+				font-size: 10px;
+			}
+		}
+	}
+}
