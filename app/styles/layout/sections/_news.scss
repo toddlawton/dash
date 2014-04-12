@@ -1,7 +1,10 @@
 .news-section {
-	min-height: 768px;
+	min-height: 500px;
 	h3 {
 		margin: $vertical-rhythm 0 $vertical-rhythm*6;
+		text-align: center;
+		border-bottom: $thin-grey-border;
+		padding-bottom: $vertical-rhythm*2;
 	}
 }
 
@@ -9,7 +12,7 @@
 	list-style-type: none;
 	padding: 0;
 	li {
-		margin-bottom: $vertical-rhythm * 3;
+		margin-bottom: $vertical-rhythm;
 		// padding-right: $vertical-rhythm * 3;
 		a:hover {
 			text-decoration: none;
@@ -17,14 +20,18 @@
 		&:hover {
 			.summary {
 				visibility: visible;
-				opacity: 1;
+				opacity: 0.7;
 			}
 		}
 		&:nth-child(n+13) {
 			display: none;
 		}
 	}
+	.headline {
+		margin: 0;
+	}
 	.summary {
+		margin: 0;
 		font-size: 60%;
 		visibility: hidden;
 		opacity: 0;

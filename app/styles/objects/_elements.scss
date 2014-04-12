@@ -8,7 +8,7 @@ $loading-spinner-size: 30px;
 	left: 50%;
 	margin-left: $loading-spinner-size/2 *-1;
 	margin-top: $loading-spinner-size/2 *-1;
-	background-color: #fff;
+	background-color: $color-wet-asphalt;
 	@include vendor-prefix(transition, 0.1s ease all);
 	@include vendor-prefix(animation, rotateplane 1.5s infinite ease-in-out);
 }

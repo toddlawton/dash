@@ -14,21 +14,11 @@ app.config(function ($routeProvider) {
 		templateUrl: 'views/main.html',
 		controller: 'MainCtrl'
 	})
+	.when('/news/hacker-news', {
+		templateUrl: 'views/news/hacker-news.html',
+		controller: 'MainCtrl'
+	})
 	.otherwise({
 		redirectTo: '/'
 	});
-});
-
-app.directive('shapeshift', function() {
-	return {
-		restrict: 'A',
-		link: function(scope, element, attrs) {
-			$(".container").shapeshift({
-			        gutterX: -1, // Compensate for border width
-			        gutterY: -1, // Compensate for border width
-			        paddingX: 0,
-			        paddingY: 0
-			});
-		}
-	}
 });

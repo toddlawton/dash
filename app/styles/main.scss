@@ -1,17 +1,18 @@
 // Lib Dependencies
 @import "bourbon/bourbon";
 
-// Utilities & Objects
-@import "utilities/helpers";
-@import "utilities/mixins";
-@import "objects/elements";
-
 // Global
 @import "global/variables";
 @import "global/typography";
 @import "layout/grid";
 @import "layout/main";
 @import "layout/header";
+@import "layout/sub-header";
+
+// Utilities & Objects
+@import "utilities/helpers";
+@import "utilities/mixins";
+@import "objects/elements";
 
 // Sections
 @import "layout/sections/news";
