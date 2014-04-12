@@ -358,7 +358,7 @@ $class-type:            unquote(".");
 /**
  * Create our width classes, prefixed by the specified namespace.
  */
-@mixin device-type($namespace:""){
+@mixin device-type($namespace:"span-"){
 
 
     /**

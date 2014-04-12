@@ -11,8 +11,7 @@
     "angular-cookies": "1.2.6",
     "angular-sanitize": "1.2.6",
     "angular-route": "1.2.6",
-    "angularjs-geolocation": "~0.1.1",
-    "jquery.shapeshift": "mcpants/jquery.shapeshift#~2.0.0"
+    "angularjs-geolocation": "~0.1.1"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",

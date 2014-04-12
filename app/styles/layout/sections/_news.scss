@@ -1,0 +1,15 @@
+.news-section {
+	
+}
+
+.news-posts {
+	list-style-type: none;
+	padding: 0;
+	li {
+		margin-bottom: $vertical-rhythm * 3;
+		padding-right: $vertical-rhythm * 3;
+	}
+	.summary {
+		font-size: 50%;
+	}
+}

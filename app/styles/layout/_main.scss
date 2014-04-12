@@ -1,7 +1,14 @@
+body {
+	border: 16px solid $color-green-sea;
+	color: #000;
+	background: $color-turquoise;
+	overflow-x: hidden;
+}
+
 .container {
 	margin: $horizontal-spacing*2 auto $horizontal-spacing*4;
-	padding: 0 $horizontal-spacing*2;
-	
+	padding: $horizontal-spacing*2;
+	background: #fff;
 }
 
 #page-root {

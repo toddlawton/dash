@@ -357,100 +357,100 @@ blockquote {
 /**
  * Whole
  */
-.one-whole {
+.span-one-whole {
   width: 100%; }
 
 /**
  * Halves
  */
-.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+.span-one-half, .span-two-quarters, .span-three-sixths, .span-four-eighths, .span-five-tenths, .span-six-twelfths {
   width: 50%; }
 
 /**
  * Thirds
  */
-.one-third, .two-sixths, .four-twelfths {
+.span-one-third, .span-two-sixths, .span-four-twelfths {
   width: 33.333%; }
 
-.two-thirds, .four-sixths, .eight-twelfths {
+.span-two-thirds, .span-four-sixths, .span-eight-twelfths {
   width: 66.666%; }
 
 /**
  * Quarters
  */
-.one-quarter, .two-eighths, .three-twelfths {
+.span-one-quarter, .span-two-eighths, .span-three-twelfths {
   width: 25%; }
 
-.three-quarters, .six-eighths, .nine-twelfths {
+.span-three-quarters, .span-six-eighths, .span-nine-twelfths {
   width: 75%; }
 
 /**
  * Fifths
  */
-.one-fifth, .two-tenths {
+.span-one-fifth, .span-two-tenths {
   width: 20%; }
 
-.two-fifths, .four-tenths {
+.span-two-fifths, .span-four-tenths {
   width: 40%; }
 
-.three-fifths, .six-tenths {
+.span-three-fifths, .span-six-tenths {
   width: 60%; }
 
-.four-fifths, .eight-tenths {
+.span-four-fifths, .span-eight-tenths {
   width: 80%; }
 
 /**
  * Sixths
  */
-.one-sixth, .two-twelfths {
+.span-one-sixth, .span-two-twelfths {
   width: 16.666%; }
 
-.five-sixths, .ten-twelfths {
+.span-five-sixths, .span-ten-twelfths {
   width: 83.333%; }
 
 /**
  * Eighths
  */
-.one-eighth {
+.span-one-eighth {
   width: 12.5%; }
 
-.three-eighths {
+.span-three-eighths {
   width: 37.5%; }
 
-.five-eighths {
+.span-five-eighths {
   width: 62.5%; }
 
-.seven-eighths {
+.span-seven-eighths {
   width: 87.5%; }
 
 /**
  * Tenths
  */
-.one-tenth {
+.span-one-tenth {
   width: 10%; }
 
-.three-tenths {
+.span-three-tenths {
   width: 30%; }
 
-.seven-tenths {
+.span-seven-tenths {
   width: 70%; }
 
-.nine-tenths {
+.span-nine-tenths {
   width: 90%; }
 
 /**
  * Twelfths
  */
-.one-twelfth {
+.span-one-twelfth {
   width: 8.333%; }
 
-.five-twelfths {
+.span-five-twelfths {
   width: 41.666%; }
 
-.seven-twelfths {
+.span-seven-twelfths {
   width: 58.333%; }
 
-.eleven-twelfths {
+.span-eleven-twelfths {
   width: 91.666%; }
 
 /**
@@ -1365,9 +1365,16 @@ blockquote {
 /**
  * Pull classes, to move grid items back to the left by certain amounts.
  */
+body {
+  border: 16px solid #16a085;
+  color: #000;
+  background: #1abc9c;
+  overflow-x: hidden; }
+
 .container {
   margin: 48px auto 96px;
-  padding: 0 48px; }
+  padding: 48px;
+  background: #fff; }
 
 #page-root {
   padding: 48px 0; }
@@ -1379,6 +1386,15 @@ blockquote {
   margin: 0; }
   .header .logo {
     width: 80px; }
+
+.news-posts {
+  list-style-type: none;
+  padding: 0; }
+  .news-posts li {
+    margin-bottom: 36px;
+    padding-right: 36px; }
+  .news-posts .summary {
+    font-size: 50%; }
 
 /* Vertical Alignment Helpers */
 .valign-parent {
@@ -1432,7 +1448,6 @@ blockquote {
 
   100% {
     -webkit-transform: perspective(300px) rotateY(180deg) rotateX(180deg); } }
-
 @keyframes rotateplane {
   0% {
     transform: perspective(300px) rotateX(0deg) rotateY(0deg);
@@ -1445,65 +1460,3 @@ blockquote {
   100% {
     transform: perspective(300px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(300px) rotateX(-180deg) rotateY(-179.9deg); } }
-
-.container {
-  width: 100%;
-  position: relative; }
-  .container [class*="widget-"] {
-    position: absolute;
-    width: 20%;
-    min-height: 200px;
-    height: auto; }
-    .container [class*="widget-"] .widget-inner {
-      position: relative;
-      width: 100%;
-      padding: 0;
-      margin: 0; }
-    .container [class*="widget-"] .title {
-      margin: 0 0 24px 0;
-      font-size: 24px;
-      font-weight: 500; }
-
-.widget-weather {
-  text-align: center;
-  padding: 20px; }
-  .widget-weather:after {
-    z-index: 1;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; }
-  .widget-weather .weather-data-container {
-    margin: 0 auto;
-    -webkit-transition: 1.5s ease all;
-    -ms-transition: 1.5s ease all;
-    -moz-transition: 1.5s ease all;
-    -o-transition: 1.5s ease all;
-    transition: 1.5s ease all; }
-  .widget-weather .current-temperature {
-    margin: 0;
-    font-size: 72px;
-    font-weight: 300; }
-  .widget-weather .widget-weather-content, .widget-weather .background-underlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0; }
-
-.widget-news .news-posts {
-  list-style-type: none;
-  padding: 0; }
-  .widget-news .news-posts li {
-    margin-bottom: 10px; }
-    .widget-news .news-posts li a {
-      color: #fff; }
-    .widget-news .news-posts li .summary {
-      font-size: 10px; }
-
-body, p {
-  color: #fff;
-  background: #2c3e50; }

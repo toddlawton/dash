@@ -8,18 +8,10 @@
 @import "layout/main";
 @import "layout/header";
 
+// Sections
+@import "layout/sections/news";
+
 // Utilities & Objects
 @import "utilities/helpers";
 @import "utilities/mixins";
 @import "objects/elements";
-
-// Widgets
-@import "widgets/global";
-@import "widgets/weather";
-@import "widgets/news";
-// @import "widgets/songkick";
-
-body, p {
-	color: #fff;
-	background: $color-midnight-blue;
-}

@@ -1,15 +1,5 @@
-<div class="container-cell widget-weather valign-parent" ng-controller="WeatherController">
-	<div class="widget-inner">
-		<div class="loading-spinner" ng-class="{ 'is-hidden': isLoaded, 'is-visible': !isLoaded }"></div>
-		<div class="weather-data-container valign is-hidden" ng-class="{ 'is-hidden': !isLoaded, 'is-visible': isLoaded }">
-			<p class="temperature-label">It is currently</p>
-			<h3 class="current-temperature text-shadow">{{ weather.main.temp | number: 0 }}&deg;</h3>
-		</div>
-		<div class="valign-helper"></div>
-	</div>
-</div>
-<div class="container-cell widget-news" ng-controller="HackerNewsController">
-	<div class="widget-inner">
+<div class="row-fluid">
+	<div class="news-section span-one-third" ng-controller="HackerNewsController">
 		<div class="loading-spinner" ng-class="{ 'is-hidden': isLoaded, 'is-visible': !isLoaded }"></div>
 		<h3 class="title">Hacker News</h3>
 		<ul class="news-posts">
@@ -18,6 +8,11 @@
 				<p class="summary"> {{ post.points + " points"}} by {{ post.postedBy }} {{ post.postedAgo }} | {{ post.commentCount + " comments" }}</p>
 			</li>
 		</ul>
+	</div>
+</div>
+<div class="container-cell widget-news">
+	<div class="widget-inner">
+		
 	</div>
 </div>
 <!-- <div class="container-cell widget-songkick valign-parent" ng-controller="BandsinTownController">
