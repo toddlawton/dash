@@ -1,3 +1,25 @@
+.sub-header {
+	background: #000;
+	margin: 0 auto;
+	padding: $vertical-rhythm*2 $horizontal-spacing*2;
+}
+
+.sub-header-nav {
+	margin: 0;
+	list-style-type: none;
+	li {
+		color: #fff;
+	}
+	p {
+		font-size: 70%;
+		font-weight: 600;
+		line-height: $vertical-rhythm*2;
+		display: inline-block;
+		margin: 0 $horizontal-spacing/2;
+		color: #fff;
+	}
+}
+
 .date-and-time {
 		.date, .time {
 			color: #fff;
