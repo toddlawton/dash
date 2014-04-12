@@ -1,5 +1,8 @@
 .news-section {
-	
+	min-height: 768px;
+	h3 {
+		margin: $vertical-rhythm 0 $vertical-rhythm*6;
+	}
 }
 
 .news-posts {
@@ -7,9 +10,24 @@
 	padding: 0;
 	li {
 		margin-bottom: $vertical-rhythm * 3;
-		padding-right: $vertical-rhythm * 3;
+		// padding-right: $vertical-rhythm * 3;
+		a:hover {
+			text-decoration: none;
+		}
+		&:hover {
+			.summary {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+		&:nth-child(n+13) {
+			display: none;
+		}
 	}
 	.summary {
-		font-size: 50%;
+		font-size: 60%;
+		visibility: hidden;
+		opacity: 0;
+		@include vendor-prefix(transition, 0.3s ease all);
 	}
 }

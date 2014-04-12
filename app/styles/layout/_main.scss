@@ -1,14 +1,20 @@
 body {
-	border: 16px solid $color-green-sea;
+	border: 16px solid $color-midnight-blue;
 	color: #000;
-	background: $color-turquoise;
+	background: $color-wet-asphalt;
 	overflow-x: hidden;
 }
 
 .container {
-	margin: $horizontal-spacing*2 auto $horizontal-spacing*4;
+	margin: 0 auto $horizontal-spacing*4;
 	padding: $horizontal-spacing*2;
 	background: #fff;
+}
+
+.header-container {
+	margin: $horizontal-spacing*2 auto 0;
+	padding: $horizontal-spacing*2;
+	background: $color-super-dark-blue;
 }
 
 #page-root {
