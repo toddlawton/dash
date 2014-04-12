@@ -3,7 +3,7 @@
 	<h3 class="title">Hacker News</h3>
 	<div class="grid">
 		<ul class="news-posts">
-			<li class="grid__item span-one-whole" ng-repeat="post in posts.items">
+			<li class="grid__item span-one-whole" ng-repeat="post in posts.items | orderBy:'points':reverse=true">
 				<a target="_blank" href="{{ post.url }}"><p class="headline">{{ post.title }}</p></a>
 				<p class="summary"> {{ post.points + " points"}}  {{ post.postedAgo }}</p>
 			</li>
