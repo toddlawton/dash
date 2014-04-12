@@ -26,12 +26,14 @@
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header-container container grid">
+        <div class="header-container container">
                 <div class="grid">
-                        <div class="grid__item span-one-third">
-                                <div class="header-item">
-                                      <p>Saturday, April 12th 2014</p>  
-                                </div>
+                        <div class="grid__item span-two-fifths">
+                                <!-- <div class="header-item">
+                                    <div class="date-and-time" ng-controller="DateTimeController">
+                                        <p class="date">{{ date | amDateFormat:'dddd, MMMM Do YYYY h:mm A' }}</p>
+                                    </div>
+                                </div> -->
                                 <!-- <div class="container-cell widget-weather valign-parent" ng-controller="WeatherController">
                                         <div class="widget-inner">
                                                 <div class="loading-spinner" ng-class="{ 'is-hidden': isLoaded, 'is-visible': !isLoaded }"></div>
@@ -43,18 +45,21 @@
                                         </div>
                                 </div>         -->
                         </div>
-                        <div class="grid__item span-one-third">
+                        <div class="grid__item span-one-fifth">
                                 <div class="logo-container">
                                       <img class="logo" src="images/dash-logo.png" />  
                                 </div>
                         </div>
+                        <!-- <div class="grid__item span-two-fifths">
+                                <div class="header-item">
+                                        <div class="date-and-time" ng-controller="DateTimeController">
+                                                <p class="time">{{ date | amDateFormat:'h:mm:ss a' }}</p>  
+                                        </div>
+                                </div>
+                        </div> -->
                 </div>
         </div>
-	<div class="grid container" ng-view="">
-                <div class="grid">
-                        
-                </div>       
-        </div>
+    	<div class="container" ng-view></div>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -83,6 +88,9 @@
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/angular-moment/angular-moment.js"></script>
         <script src="bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->

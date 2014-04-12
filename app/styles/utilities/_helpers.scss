@@ -30,10 +30,12 @@
 
 /* Scaling Animations */
 
-@keyframes scaleDown {
-    to { opacity: 0; transform: scale(.8); }
+.animate-enter {
+	-webkit-transition: 1s linear all; /* Chrome */
+	transition: 1s linear all;
+	opacity: 0;
 }
  
-@keyframes scaleUp {
-    from { opacity: 0; transform: scale(.8); }
+.animate-enter.animate-enter-active {
+	opacity: 1;
 }

@@ -1381,7 +1381,6 @@ body {
 
 .header-container {
   margin: 48px auto 0;
-  padding: 48px;
   background: #101f2e; }
 
 #page-root {
@@ -1393,6 +1392,13 @@ body {
 .logo {
   width: 80px;
   margin: 0 auto; }
+
+.date-and-time .date, .date-and-time .time {
+  color: #fff;
+  line-height: 48px;
+  font-size: 70%;
+  font-weight: 600;
+  margin: 0; }
 
 /* Vertical Alignment Helpers */
 .valign-parent {
@@ -1418,14 +1424,15 @@ body {
   opacity: 1; }
 
 /* Scaling Animations */
-@keyframes scaleDown {
-  to {
-    opacity: 0;
-    transform: scale(0.8); } }
-@keyframes scaleUp {
-  from {
-    opacity: 0;
-    transform: scale(0.8); } }
+.animate-enter {
+  -webkit-transition: 1s linear all;
+  /* Chrome */
+  transition: 1s linear all;
+  opacity: 0; }
+
+.animate-enter.animate-enter-active {
+  opacity: 1; }
+
 .loading-spinner {
   width: 30px;
   height: 30px;

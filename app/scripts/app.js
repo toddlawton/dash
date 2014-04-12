@@ -5,6 +5,8 @@ var app = angular.module('dashApp', [
 	'ngResource',
 	'ngSanitize',
 	'ngRoute',
+	'ngAnimate',
+	'angularMoment',
 	'geolocation'
 ]);
 
@@ -21,4 +23,12 @@ app.config(function ($routeProvider) {
 	.otherwise({
 		redirectTo: '/'
 	});
+});
+
+app.controller('DateTimeController', function($scope, $interval) {
+	$scope.updateTime = function() {
+		$scope.date = new Date();
+	};
+	$scope.date = new Date();
+	$interval($scope.updateTime, 1000);
 });
