@@ -7,25 +7,35 @@
 .sub-header-nav {
 	margin: 0;
 	list-style-type: none;
+	display: inline-block;
 	li {
 		color: #fff;
+		display: inline-block;
+		margin: 0 $horizontal-spacing/2;
+		a, i {
+			line-height: $vertical-rhythm*2;
+		}
+		a p {
+			color: rgba(255,255,255,0.5);
+			@include vendor-prefix(transition, $global-fast-fade-settings);
+		}
+		a.active p {
+			color: rgba(255,255,255,1);
+		}
+		&:first-child {
+			margin-left: 0;
+		}
 	}
 	p {
 		font-size: 70%;
 		font-weight: 600;
 		line-height: $vertical-rhythm*2;
 		display: inline-block;
-		margin: 0 $horizontal-spacing/2;
+		margin: 0;
 		color: #fff;
 	}
 }
 
-.date-and-time {
-		.date, .time {
-			color: #fff;
-			line-height: 48px;
-			font-size: 70%;
-			font-weight: 600;
-			margin: 0;
-		}
+.sub-header-info {
+	float: right;
 }

@@ -3,6 +3,12 @@
 
 // Global
 @import "global/variables";
+
+// Utilities & Objects
+@import "utilities/helpers";
+@import "utilities/mixins";
+@import "objects/elements";
+
 @import "global/typography";
 @import "global/icon-font";
 @import "layout/grid";
@@ -10,10 +16,7 @@
 @import "layout/header";
 @import "layout/sub-header";
 
-// Utilities & Objects
-@import "utilities/helpers";
-@import "utilities/mixins";
-@import "objects/elements";
+
 
 // Sections
 @import "layout/sections/news";

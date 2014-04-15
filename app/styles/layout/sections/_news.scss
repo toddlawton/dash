@@ -1,6 +1,6 @@
 .news-section {
 	min-height: 500px;
-	h3 {
+	h2 {
 		margin: $vertical-rhythm 0 $vertical-rhythm*6;
 		text-align: center;
 		border-bottom: $thin-grey-border;
@@ -18,7 +18,7 @@
 			text-decoration: none;
 		}
 		&:hover {
-			.summary {
+			.postinfo {
 				visibility: visible;
 				opacity: 0.7;
 			}
@@ -27,14 +27,29 @@
 			display: none;
 		}
 	}
-	.headline {
+	.headline, .summary {
 		margin: 0;
 	}
-	.summary {
+
+	.headline {
+		font-weight: 600;
+	}
+	.postinfo {
 		margin: 0;
 		font-size: 60%;
 		visibility: hidden;
 		opacity: 0;
 		@include vendor-prefix(transition, 0.3s ease all);
+	}
+	.user-image {
+		border-radius: 100%;
+		width: 30px;
+		height: 30px;
+		margin-bottom: 40px;
+		display: inline-block;
+		margin-right: $horizontal-spacing;
+		img {
+			width: 100%;
+		}
 	}
 }

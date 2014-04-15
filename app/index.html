@@ -6,7 +6,7 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Dash</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
@@ -25,7 +25,13 @@
         <!--[if lt IE 7]>
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+        <!-- <div class="grid-overlay">
+                <div class="container">
+                        <div class="grid">
+                                
+                        </div>
+                </div>
+        </div> -->
         <div class="header-container container">
                 <div class="grid">
                         <div class="grid__item span-two-fifths">
@@ -34,39 +40,45 @@
                                         <p class="date">{{ date | amDateFormat:'dddd, MMMM Do YYYY h:mm A' }}</p>
                                     </div>
                                 </div> -->
-                                <!-- <div class="container-cell widget-weather valign-parent" ng-controller="WeatherController">
-                                        <div class="widget-inner">
-                                                <div class="loading-spinner" ng-class="{ 'is-hidden': isLoaded, 'is-visible': !isLoaded }"></div>
-                                                <div class="weather-data-container valign is-hidden" ng-class="{ 'is-hidden': !isLoaded, 'is-visible': isLoaded }">
-                                                        <p class="temperature-label">It is currently</p>
-                                                        <h3 class="current-temperature text-shadow">{{ weather.main.temp | number: 0 }}&deg;</h3>
-                                                </div>
-                                                <div class="valign-helper"></div>
-                                        </div>
-                                </div>         -->
                         </div>
                         <div class="grid__item span-one-fifth">
                                 <div class="logo-container">
                                       <a href="/"><img class="logo" src="images/dash-logo.png" /></a>
                                 </div>
                         </div>
-                        <!-- <div class="grid__item span-two-fifths">
-                                <div class="header-item">
-                                        <div class="date-and-time" ng-controller="DateTimeController">
-                                                <p class="time">{{ date | amDateFormat:'h:mm:ss a' }}</p>  
-                                        </div>
-                                </div>
-                        </div> -->
                 </div>
         </div>
         <div class="sub-header container">
                 <div class="grid">
-                        <ul class="sub-header-nav">
-                                <li><a href="#/news/hacker-news"><i class="icon-newspaper"></i><p>Hacker News</p></a></li>
+                        <ul class="sub-header-nav" ng-controller="NavigationController">
+                                <li><i class="icon-newspaper"></i></li>
+                                <li><a href="#/news/hacker-news" ng-class="{active: isActive('/news/hacker-news')}"><p>Hacker News</p></a></li>
+                                <li><a href="#/news/product-hunt" ng-class="{active: isActive('/news/product-hunt')}"><p>Product Hunt</p></a></li>
+                                <li><a href="#/news/designer-news" ng-class="{active: isActive('/news/designer-news')}"><p>Designer News</p></a></li>
+                        </ul>
+                        <ul class="sub-header-nav sub-header-info">
+                                <li>
+                                        <div class="container-cell widget-weather" ng-controller="WeatherController">
+                                                <div class="widget-inner">
+                                                        <div class="weather-data-container is-hidden" ng-class="{ 'is-hidden': !isLoaded, 'is-visible': isLoaded }">
+                                                                <p class="current-temperature">{{ weather.main.temp | number: 0 }}&deg;C</p>
+                                                        </div>
+                                                </div>
+                                        </div>  
+                                </li>
+                                <li>
+                                        <div class="date-and-time" ng-controller="DateTimeController">
+                                                <p class="time">{{ date | amDateFormat:'h:mm:ss a' }}</p>  
+                                        </div>
+                                </li>
                         </ul>
                 </div>
         </div>
-    	<div class="container" ng-view></div>
+    	<div class="container">
+                <div class="grid">
+                        <div class="news-section grid__item span-three-quarters push--one-eighth" ng-view></div>
+                </div>    
+        </div>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -105,8 +117,6 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/weather-controller.js"></script>
-        <script src="scripts/controllers/hackernews-controller.js"></script>
         <!-- <script src="scripts/controllers/bandsintown-controller.js"></script> -->
         <!-- endbuild -->
 </body>
