@@ -24,6 +24,10 @@ app.config(function ($routeProvider) {
 		templateUrl: 'views/news/hacker-news.html',
 		controller: 'HackerNewsController'
 	})
+	.when('/news/reddit-world-news', {
+		templateUrl: 'views/news/reddit-world-news.html',
+		controller: 'RedditWorldNewsController'
+	})
 	.when('/news/product-hunt', {
 		templateUrl: 'views/news/product-hunt.html',
 		controller: 'ProductHuntController'
@@ -103,14 +107,19 @@ app.controller('ProductHuntController', function($scope, $http) {
 	});
 });
 
+app.controller('RedditWorldNewsController', function($scope, $http) {
+	$http.jsonp('http://www.kimonolabs.com/api/6d4ghw0c?apikey=d8e02115e89bf009946f1e74672c3c70&callback=JSON_CALLBACK')
+	.success(function(data) {
+		$scope.posts = data.results.redditworldnews;
+		$scope.isLoaded = true;
+	});
+});
+
 app.controller('HackerNewsController', function($scope, $http) {
 	$http.jsonp('http://api.ihackernews.com/page?format=jsonp&callback=JSON_CALLBACK')
 	.success(function(data) {
 		$scope.posts = data;
 		$scope.isLoaded = true;
-	})
-	.error(function(data, status) {
-		console.log(data+' '+status);
 	});
 });
 
@@ -119,8 +128,5 @@ app.controller('DesignerNewsController', function($scope, $http) {
 	.success(function(data) {
 		$scope.posts = data.results.designernews;
 		$scope.isLoaded = true;
-	})
-	.error(function(data, status) {
-		console.log(data+' '+status);
 	});
 });

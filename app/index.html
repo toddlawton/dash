@@ -51,10 +51,12 @@
         <div class="sub-header container">
                 <div class="grid">
                         <ul class="sub-header-nav" ng-controller="NavigationController">
-                                <li><i class="icon-newspaper"></i></li>
+                                <li><i class="icon-note"></i></li>
+                                <li><a href="#/news/reddit-world-news" ng-class="{active: isActive('/news/reddit-world-news')}"><p>r/World News</p></a></li>
                                 <li><a href="#/news/hacker-news" ng-class="{active: isActive('/news/hacker-news')}"><p>Hacker News</p></a></li>
-                                <li><a href="#/news/product-hunt" ng-class="{active: isActive('/news/product-hunt')}"><p>Product Hunt</p></a></li>
                                 <li><a href="#/news/designer-news" ng-class="{active: isActive('/news/designer-news')}"><p>Designer News</p></a></li>
+                                <li><i class="icon-diamond"></i></li>
+                                <li><a href="#/news/product-hunt" ng-class="{active: isActive('/news/product-hunt')}"><p>Product Hunt</p></a></li>
                         </ul>
                         <ul class="sub-header-nav sub-header-info">
                                 <li>
@@ -76,7 +78,7 @@
         </div>
     	<div class="container">
                 <div class="grid">
-                        <div class="news-section grid__item span-three-quarters push--one-eighth" ng-view></div>
+                        <div class="news-section grid__item span-three-quarters push--one-eighth" ng-view></div>    
                 </div>    
         </div>
 

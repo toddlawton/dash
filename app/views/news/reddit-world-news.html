@@ -1,0 +1,12 @@
+<div class="loading-spinner" ng-class="{ 'is-hidden': isLoaded, 'is-visible': !isLoaded }"></div>
+<h2 class="title">r/World News</h2>
+<div class="grid">
+	<ul class="news-posts">
+		<li class="grid__item span-one-whole" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="post in posts | filter: '!sticky'">
+			<a target="_blank" href="{{ post.headline.href }}">
+				<p class="headline">{{ post.headline.text }}</p>
+			</a>	
+			<p class="postinfo"><a target="_blank" href="{{ post.comments.href }}">{{ post.comments.text }}</a> {{ post.postdate.text }}</p>
+		</li>
+	</ul>
+</div>
